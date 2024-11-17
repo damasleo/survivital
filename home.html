@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SurviVital medical web-site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="static/icons/web/favicon.ico" type="image/png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="static/css/style.css" rel="stylesheet">
+    <link href="static/css/home.css" rel="stylesheet">
+
+</head>
+
+<body>
+    
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!--navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0 bg-dark">
+        <a href="index.html" class="navbar-brand p-1">
+            <h1 class="m-0"><img src="static/icons/web/icon-192.png" alt="image logo"style="width: 15%; height: 15%;">SurviVital</h1>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <div class="container">
+                    <div class="d-flex align-items-center">
+                        <!-- Search container -->
+                        <div class="search-container d-flex align-items-center me-3">
+                            <input type="text" class="search-input form-control me-2" placeholder="Search..." style="max-width: 300px;">
+                            <i class="fas fa-search search-icon text-primary"></i>
+                        </div>
+                        <!-- Language button -->
+                        <div class="dropdown me-3">
+                            <button type="button" class="btn btn-outline-primary" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                Language <i class="fas fa-globe ms-1"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <a class="dropdown-item" href="#">English</a>
+                                <a class="dropdown-item" href="#">Français</a>
+                                <a class="dropdown-item" href="#">Español</a>
+                                <a class="dropdown-item" href="#">Deutsch</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Profle photo -->
+                        <div class="dropdown">
+                            <button type="button" class="btn text-dark p-0" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="static/img/profile2.jpg" alt="" style="width: 2rem; border-radius: 50%;">
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end px-4 p-4" aria-labelledby="userDropdown">
+                                <ul class="list-group list-group-flush d-flex" style="list-style: none; padding: 0; margin: 0;">
+                                    <li class="flex-fill mb-2"><a href="login.html" class="btn btn-primary w-100"><i class="fas fa-sign-in-alt me-2"></i>Login</a></li>
+                                    <li class="flex-fill"><a href="signup.html" class="btn btn-dark w-100"><i class="fas fa-user-plus me-2"></i>Signup</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div> 
+        </div>             
+    </nav>
+    <!--navar End-->
+
+    <!--Main-->
+    <main>
+        <div class="container">
+            <div class="left">
+                <!--Sidebar Start-->
+                    <div class="sidebar">
+                        <a class="menu-items active" href="index.html">
+                            <i class="fa fa-home"></i> <span class="align-middle">Home</span>
+                         </a>
+                        
+
+                                <a class="menu-items" href="pages-profile.html">
+                                    <i class="fa fa-user"></i> <span class="align-middle"> User profile</span>
+                                    </a>
+
+                                <a class="menu-items" href="#">
+                                    <i class="fa fa-notes-medical"></i> <span class="align-middle">Medical guide</span>
+                                </a>
+                            
+
+                                <a class="menu-items" href="#">
+                                    <i class="fa fa-calendar-alt"></i> <span class="align-middle">Appointment</span>
+                                </a>
+                            
+
+                                <a class="menu-items" href="#">
+                                    <i class="fa fa-laptop-medical"></i> <span class="align-middle">Telemedicine</span>
+                                </a>
+
+                                <a class="menu-items" href="#">
+                                    <i class="fa fa-clock"></i> <span class="align-middle">Medical Reminder</span>
+                                </a>
+
+                                <a class="menu-items" href="#" id="notification">
+                                    <i class="fa fa-bell"><small class="notification-count">9</small></i> <span class="align-middle">Notification</span>
+                                    <div class="notification-popup">
+                                        <div class="notification-content">
+                                            <!-- Notification Item -->
+                                            <div class="notification-item">
+                                                <div class="profile-photo" style="margin-right: 1rem; margin-left: 1rem;">
+                                                    <img src="static/img/testimonial-1.jpg" alt="">
+                                                </div>
+                                                <div class="notification-body">
+                                                    <div class="notification-text">
+                                                        <b>Dr Shaun</b> confirmed your appointment
+                                                    </div>
+                                                    <small class="text-muted">2 days ago</small>
+                                                </div>
+                                            </div>
+                                    
+                                            <!-- Notification Item -->
+                                            <div class="notification-item">
+                                                <div class="notification-icon">
+                                                    <i class="fa fa-clock"></i>
+                                                </div>
+                                                <div class="notification-body">
+                                                    <div class="notification-text">
+                                                        <b>Reminder!</b> It's time to have your medicine
+                                                    </div>
+                                                    <small class="text-muted">just now</small>
+                                                </div>
+                                            </div>
+                                            <!-- Notification Item -->
+                                            <div class="notification-item">
+                                                <div class="profile-photo" style="margin-right: 1rem; margin-left: 1rem;">
+                                                    <img src="static/img/testimonial-2.jpg" alt="">
+                                                </div>
+                                                <div class="notification-body">
+                                                    <div class="notification-text">
+                                                        <b>Dr Murphy</b> view your received your medical data 
+                                                    </div>
+                                                    <small class="text-muted">5 mins ago</small>
+                                                </div>
+                                            </div>
+                                            <!-- Notification Item -->
+                                            <div class="notification-item">
+                                                <div class="notification-icon">
+                                                    <i class="fa fa-clock"></i>
+                                                </div>
+                                                <div class="notification-body">
+                                                    <div class="notification-text">
+                                                        <b>Reminder!</b> you have an appointement on monday
+                                                    </div>
+                                                    <small class="text-muted">just now</small>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- Notification Item -->
+                                            <div class="notification-item">
+                                                <div class="notification-icon">
+                                                    <i class="fa fa-clock"></i>
+                                                </div>
+                                                <div class="notification-body">
+                                                    <div class="notification-text">
+                                                        <b>Reminder!</b> you have not taken your medication for 4 days
+                                                    </div>
+                                                    <small class="text-muted">just now</small>
+                                                </div>
+                                                
+                                            </div>
+                                            <!-- Notification Item -->
+                                            <div class="notification-item">
+                                                <div class="profile-photo" style="margin-right: 1rem; margin-left: 1rem;">
+                                                    <img src="static/img/testimonial-1.jpg" alt="">
+                                                </div>
+                                                <div class="notification-body">
+                                                    <div class="notification-text">
+                                                        <b>Dr Shaun</b> confirmed your appointment
+                                                    </div>
+                                                    <small class="text-muted">2 days ago</small>
+                                                </div>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                    
+                                </a>
+                                <a class="menu-items" href="#" id="message-notification">
+                                    <i class="fa fa-envelope"><small class="notification-count">6</small></i> <span class="align-middle">Message</span>
+                                </a>
+
+                                <a class="menu-items" href="ui-buttons.html">
+                                    <i class="fa fa-crown"></i> <span class="align-middle">Premium features</span>
+                                </a>
+
+                                <a class="menu-items" href="ui-forms.html">
+                                    <i class="fa fa-question-circle"></i> <span class="align-middle">Help & Support</span>
+                                </a>
+
+                                <a class="menu-items active" href="ui-cards.html">
+                                    <i class="fa fa-cog"></i> <span class="align-middle">Settings</span>
+                                </a>   
+                    </div>
+                     <!--Sidebar End-->
+
+                <!--<li class="flex-fill"><a href="login.html" class="btn btn-primary py-md-3 px-md-5 me-2 w-100"><i class="fa fa-sign-out-alt" style="margin-right: 0.5rem;"></i>Logout</a></li>-->         
+            </div>
+            <div class="middle">            
+                <div class="container-fluid py-5 fadeInUp" data-wow-delay="0.1s">
+                    <div class="section-title position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                        <div class="space d-flex mb-3">
+                            <div class="profile-photo">
+                                <img src="static/img/testimonial-1.jpg" alt="">
+                            </div>
+                            <h5 class="fw-bold text-primary text-uppercase">Welcome to SurviVital Leonel Damas !</h5>
+                        </div>
+                        <h3 class="mb-0">This is your medical space</h3>
+                    </div>
+                
+                    <div class="row g-5">
+                        <!-- Première carte -->
+                        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                            <div class="card bg-white text-center">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <h4 class="card-title mb-3">Appointment</h4>
+                                    <div class="service-icon mb-3">
+                                        <i class="fas fa-calendar-alt text-primary" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <p class="card-text flex-grow-1">No appointment is coming. Let's start by getting an appointment.</p>
+                                    <a href="login.html" class="btn btn-primary mt-3 w-100">Get appointment</a>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Deuxième carte -->
+                        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                            <div class="card bg-white text-center">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <h4 class="card-title mb-3">Reminder</h4>
+                                    <div class="service-icon mb-3">
+                                        <i class="fas fa-pills text-primary" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <p class="card-text flex-grow-1">No medication reminder saved. Add your medication to be reminded.</p>
+                                    <a href="login.html" class="btn btn-primary mt-3 w-100">Set reminder</a>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Troisième carte -->
+                        <div class="col-lg-4 wow zoomIn" data-wow-delay="0.9s">
+                            <div class="card bg-white text-center">
+                                <div class="card-body d-flex flex-column align-items-center">
+                                    <h4 class="card-title mb-3">Medical Data</h4>
+                                    <div class="service-icon mb-3">
+                                        <i class="fas fa-heartbeat text-primary" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <p class="card-text flex-grow-1">No medical data saved. Add your data for a customized follow-up.</p>
+                                    <a href="login.html" class="btn btn-primary mt-3 w-100">Add data</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doctors Profile Start -->
+                <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="section-title position-relative pb-3 mb-5 mx-auto text-center" style="max-width: 600px;">
+                        <h3 class="mb-0 text-uppercase">Find Doctors</h3>
+                    </div> 
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="static/img/testimonial-1.jpg" class="img-fluid rounded-start" alt="...">
+                                            <a href="login.html" class="btn btn-primary mt-3"><i class="fa fa-envelope"></i> Message </a>
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h4 class="card-title text-primary">Name</h4>
+                                              <h5 class="subtitle text-uppercase">specialisation</h5>
+                                              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                              <div class="text-center mt-4">
+                                                <a href="#" class="me-5">
+                                                    <i class="fas fa-thumbs-up"></i> Like
+                                                </a>
+                                           
+                                                <a href="#" class="">
+                                                    <i class="fas fa-users"></i> Follow
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="static/img/testimonial-2.jpg" class="img-fluid rounded-start" alt="...">
+                                            <a href="login.html" class="btn btn-primary mt-3"><i class="fa fa-envelope"></i> Message </a>
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h4 class="card-title text-primary">Name</h4>
+                                              <h5 class="subtitle text-uppercase">specialisation</h5>
+                                              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                              <div class="text-center mt-4">
+                                                <a href="#" class="me-5">
+                                                    <i class="fas fa-thumbs-up"></i> Like
+                                                </a>
+                                           
+                                                <a href="#" class="">
+                                                    <i class="fas fa-users"></i> Follow
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="static/img/testimonial-4.jpg" class="img-fluid rounded-start" alt="...">
+                                            <a href="login.html" class="btn btn-primary mt-3"><i class="fa fa-envelope"></i> Message </a>
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h4 class="card-title text-primary">Name</h4>
+                                              <h5 class="subtitle text-uppercase">specialisation</h5>
+                                              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                              <div class="text-center mt-4">
+                                                <a href="#" class="me-5">
+                                                    <i class="fas fa-thumbs-up"></i> Like
+                                                </a>
+                                           
+                                                <a href="#" class="">
+                                                    <i class="fas fa-users"></i> Follow
+                                                </a>
+                                              </div>
+                                           </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="static/img/user.jpg" class="img-fluid rounded-start" alt="...">
+                                            <a href="login.html" class="btn btn-primary mt-3"><i class="fa fa-envelope"></i> Message </a>
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h4 class="card-title text-primary">Name</h4>
+                                              <h5 class="subtitle text-uppercase">specialisation</h5>
+                                              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                              <div class="text-center mt-4">
+                                                <a href="#" class="me-5">
+                                                    <i class="fas fa-thumbs-up"></i> Like
+                                                </a>
+                                           
+                                                <a href="#" class="">
+                                                    <i class="fas fa-users"></i> Follow
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>                          
+                        </div>
+                          <div class="carousel-item">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="static/img/testimonial-1.jpg" class="img-fluid rounded-start" alt="...">
+                                            <a href="login.html" class="btn btn-primary mt-3"><i class="fa fa-envelope"></i> Message </a>
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h4 class="card-title text-primary">Name</h4>
+                                              <h5 class="subtitle text-uppercase">specialisation</h5>
+                                              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                              <div class="text-center mt-4">
+                                                <a href="#" class="me-5">
+                                                    <i class="fas fa-thumbs-up"></i> Like
+                                                </a>
+                                           
+                                                <a href="#" class="">
+                                                    <i class="fas fa-users"></i> Follow
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                          <div class="col-md-4">
+                                            <img src="static/img/testimonial-2.jpg" class="img-fluid rounded-start" alt="...">
+                                            <a href="login.html" class="btn btn-primary mt-3"><i class="fa fa-envelope"></i> Message </a>
+                                          </div>
+                                          <div class="col-md-8">
+                                            <div class="card-body">
+                                              <h4 class="card-title text-primary">Name</h4>
+                                              <h5 class="subtitle text-uppercase">specialisation</h5>
+                                              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                              <div class="text-center mt-4">
+                                                <a href="#" class="me-5">
+                                                    <i class="fas fa-thumbs-up"></i> Like
+                                                </a>
+                                           
+                                                <a href="#" class="">
+                                                    <i class="fas fa-users"></i> Follow
+                                                </a>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                </div>
+                            </div>
+                         </div>
+                        </div>
+                      </div>
+                        
+                </div>
+                    <!-- doctor profile End -->
+
+                    <!-- Article start -->
+
+
+                     <div class="container-fluid py-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="section-title position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
+                            <h3 class="mb-0 text-uppercase">Articles</h3>
+                        </div> 
+                        <div class="card mb-4" style="border: #ddd; border-radius: 8px;">
+                            <!-- Header: Profile photo, Name, and action toggle button -->
+                            <div class="card-header d-flex align-items-center p-2">
+                                <div class="profile-photo me-2">
+                                    <img src="static/img/testimonial-3.jpg" alt="Profile Photo" class="img-fluid rounded-circle" style="width: 40px; height: 40px;">
+                                </div>
+                                <div class="d-flex flex-column">
+                                    <h4 class="card-title text-primary">Leo Damas</h4>
+                                    <a href="#" class="">
+                                        <i class="fas fa-users"></i> Follow
+                                    </a>
+                                </div>
+                                <div class="ms-auto">
+
+                                    <div class="dropdown">
+                                        <a href=""  class="btn btn-link text-primary" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none;">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                       
+                                        <ul class="dropdown-menu">
+                                          <li><a class="dropdown-item" href="#">Action</a></li>
+                                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul>
+                                      </div>
+                                    
+                                </div>
+                            </div>
+                        
+                           
+    </main>      
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <script>
+        document.querySelector('.search-icon').addEventListener('click', function() {
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput.classList.contains('active')) {
+                searchInput.classList.remove('active');
+            } else {
+                searchInput.classList.add('active');
+                searchInput.focus();
+            }
+        });
+    </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.default.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/main.js"></script>
+</body>
+</html>

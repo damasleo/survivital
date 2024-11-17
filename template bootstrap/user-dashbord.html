@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>SurviVital medical web-site</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+    <link rel="icon" href="static/icons/web/favicon.ico" type="image/png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/app.css" rel="stylesheet">
+
+
+    <!-- Template Stylesheet -->
+    <link href="static/css/user-dashbord.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuiviVital - Tableau de Bord</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Importation du CSS personnalisé */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #2c3e50;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #1abc9c;
+        }
+        .main-content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .card {
+            border-radius: 10px;
+        }
+        .card-body {
+            background-color: #f4f6f9;
+        }
+        .btn-custom {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #16a085;
+        }
+        .welcome-text {
+            color: #34495e;
+        }
+        .empty-section {
+            text-align: center;
+            color: #7f8c8d;
+            padding: 20px;
+        }
+        .empty-section i {
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3 class="text-center text-white">SuiviVital</h3>
+        <a href="#">Tableau de Bord</a>
+        <a href="#">Rendez-vous</a>
+        <a href="#">Données de Santé</a>
+        <a href="#">Historique Médical</a>
+        <a href="#">Conseils de Santé</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <a class="navbar-brand" href="#">SuiviVital</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Notifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Paramètres</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Section de Bienvenue -->
+        <div class="d-flex justify-content-between align-items-center mt-4 mb-4">
+            <h2 class="welcome-text">Bienvenue, [Nom de l'utilisateur] !</h2>
+            <img src="avatar.png" alt="Avatar" class="rounded-circle" style="width: 60px; height: 60px;">
+        </div>
+
+        <!-- Widgets : Rappel et Prochain Rendez-vous -->
+        <div class="row">
+            <!-- Prochain Rendez-vous (vide si aucune donnée) -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-white bg-primary shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Prochain Rendez-vous</h5>
+                        <div class="empty-section">
+                            <i class="fas fa-calendar-times"></i>
+                            <p>Aucun rendez-vous à venir. <br> Commencez par prendre rendez-vous avec un professionnel de santé.</p>
+                            <button class="btn-custom">Prendre un Rendez-vous</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Rappels Médicaments (vide si aucune donnée) -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-white bg-success shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Rappels Médicaments</h5>
+                        <div class="empty-section">
+                            <i class="fas fa-pills"></i>
+                            <p>Aucun rappel de médicament enregistré. <br> Ajoutez vos médicaments pour être rappelé à l'heure.</p>
+                            <button class="btn-custom">Ajouter un Médicament</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Données de Santé (vide si aucune donnée) -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-white bg-info shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Données de Santé</h5>
+                        <div class="empty-section">
+                            <i class="fas fa-heartbeat"></i>
+                            <p>Aucune donnée de santé enregistrée. <br> Suivez vos données pour un suivi personnalisé.</p>
+                            <button class="btn-custom">Ajouter des Données</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actualités Médicales -->
+        <div class="card mt-4 shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Actualités et Conseils de Santé</h5>
+                <ul id="health-news" class="list-unstyled">
+                    <!-- Articles générés dynamiquement par JavaScript -->
+                </ul>
+                <button class="btn btn-primary">Voir toutes les actualités</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Simulation de l'ajout d'actualités médicales
+        const news = [
+            { title: "Les bienfaits d'une alimentation équilibrée", description: "Découvrez comment une bonne alimentation peut améliorer votre santé." },
+            { title: "Exercice physique : conseils pour débutants", description: "Commencez à faire de l'exercice sans risque pour votre santé." },
+            { title: "Les nouvelles tendances en télémédecine", description: "Apprenez comment les nouvelles technologies transforment la consultation médicale." }
+        ];
+
+        // Générer dynamiquement les actualités
+        const newsList = document.getElementById("health-news");
+        news.forEach(article => {
+            const li = document.createElement("li");
+            li.classList.add("mb-3");
+            li.innerHTML = `
+                <h6><a href="#">${article.title}</a></h6>
+                <p class="text-muted">${article.description}</p>
+            `;
+            newsList.appendChild(li);
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+    
+        
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <script>
+        // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
+
+    
+    
+    </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="static/js/app.js"></script>
+    <script src="static/js/main.js"></script>
+
+
+</body>
+</html>
